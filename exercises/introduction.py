@@ -6,11 +6,18 @@ def repeat(string, num):
 
     Returnerar en ny sträng eller en tom sträng om num är negativt.
     """
-    pass
+
+    return string * num
+
 
 def bouncer(items):
     """Tar bort alla värden i items (arg 1) som evalueras till False."""
-    pass
+
+    result = []
+    for item in items:
+        if item:
+            result.append(item)
+    return result
 
 
 def rovarsprak(string):
@@ -21,7 +28,17 @@ def rovarsprak(string):
 
     `Wikipedia<https://sv.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket>`_
     """
-    pass
+
+    rovarspraket = []
+    for letter in string:
+        if letter == "a" or "e" or "E" or "i" or "o" or "u" or "y" or "å" or "ä" or "ö" or "1" or "2" or "3":
+            rovarspraket.append(string)
+        else:
+            rovarspraket.append(string)
+            rovarspraket.append("o")
+            rovarspraket.append(string)
+    return string
+
 
 
 def area(width, height):
