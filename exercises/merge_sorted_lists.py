@@ -1,4 +1,4 @@
-"""Parsons programming-problem
+"""Parsons programming-problem.
 
 Instruktion
 ===========
@@ -11,8 +11,8 @@ Alla docstrings har placerats före kodraderna som ska användas för problemet.
 """
 
 
-"""Givet två sorterade listor, slå samman dess till en sorterad lista."""
 def merge_sorted_lists(l1, l2):
+    """Givet två sorterade listor, slå samman dess till en sorterad lista."""
     result = []
     while len(l1) > 0 or len(l2) > 0:
         if len(l1) > 0 and len(l2) > 0:
