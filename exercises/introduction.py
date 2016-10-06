@@ -20,6 +20,7 @@ def bouncer(items):
 
 def rovarsprak(string):
     """Returnerar strängen på rövarspråk.
+
     * Versaler och gemener ska vara kvar enligt instoppad sträng.
 
     * Övriga tecken (.,*! etc.) ska vara kvar på samma position.
@@ -115,7 +116,7 @@ def travel_price(distance, consumtion, price):
 
 def character_frequency(words):
     """Returnerar ett histogram (dictionary).
-    
+
     Returnerar en dictionary med varje bokstav i strängen `words` som nyckel
     till ett värde av antalet gånger bokstaven uppkommer i stängen.
     """
