@@ -29,31 +29,46 @@ def rovarsprak(string):
     `Wikipedia<https://sv.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket>`_
     """
 
-    rovarspraket = []
-    for letter in string:
-        if letter == "a" or "e" or "E" or "i" or "o" or "u" or "y" or "å" or "ä" or "ö" or "1" or "2" or "3":
-            rovarspraket.append(string)
+    rovarsprak = []
+    konsonant = ["q", "w", "r", "t", "p", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"]
+    konsonantStor = ["Q", "W", "R", "T", "P", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"]
+    while len(string) > 0:
+        if string[0] == konsonant:
+            rovarsprak.append(string)
+            rovarsprak.append("o")
+            rovarsprak.append(string)
+        if string[0] == konsonantStor:
+            rovarsprak.append(string)
+            rovarsprak.append("O")
+            rovarsprak.append(string)
         else:
-            rovarspraket.append(string)
-            rovarspraket.append("o")
-            rovarspraket.append(string)
-    return string
+            rovarsprak.append(string)
+    return rovarsprak
 
 
 
 def area(width, height):
     """Returnerar arean av en figur med bredden 'width' och höjden 'height'."""
-    pass
+
+    return width * height
 
 
 def to_seconds(time):
     """Returnerar en float `time` (timmar) till sekunder."""
-    pass
+
+    return time * 3600
 
 
 def is_of_age(age):
     """Returnerar true om 'age' är större eller lika med 18, annars false."""
-    pass
+
+    result = []
+    if age <= 18:
+        result.append(True)
+        return result
+    else:
+        result.append(False)
+        return result
 
 
 def vowel(character):
@@ -67,7 +82,11 @@ def reverse(words):
     words = "Hej på dig!" ska till exempel returnera
     strängen "!gid åp jeH".
     """
-    pass
+    result = []
+    while len(words) > 0:
+        result.insert(0, words)
+        if len(words) == 0:
+            return result
 
 
 def overlapping(list1, list2):
@@ -99,7 +118,7 @@ def travel_price(distance, consumtion, price):
     Resan är `distance` km lång, och görs med en bil som drar `consumption`
     liter bensin per mil då bensinen kostar `price` kr per liter.
     """
-    pass
+    return (distance / 10) * consumtion * price
 
 
 def character_frequency(words):

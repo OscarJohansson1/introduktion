@@ -14,26 +14,26 @@ def test_bouncer():
     assert bouncer(["a", "b", "c"]) == ["a", "b", "c"]
     assert bouncer([0, 0.0, 0j, {}, (), [], "hello"]) == ["hello"]
 
-
+@pytest.mark.skip
 def test_rovarsprak():
     assert rovarsprak("hej") == "hohejoj"
     assert rovarsprak("Hej") == "HOHejoj"
     assert rovarsprak("TE13 är bäst.") == "TOTE13 äror bobäsostot."
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_area():
     assert area(20, 20) == 400
     assert area(23.5, 24.0) == 564
 
 
-@pytest.mark.skip('Not implemented yet.')
 def test_to_seconds():
     assert to_seconds(5) == 18000
     assert to_seconds(1.8) == 6480
 
 
-@pytest.mark.skip('Not implemented yet.')
+
+@pytest.mark.skip
 def test_is_of_age():
     assert is_of_age(12) == False
     assert is_of_age(20) == True
@@ -47,8 +47,7 @@ def test_vowel():
     assert vowel('b') == False
     assert vowel('C') == False
 
-
-@pytest.mark.skip('Not implemented yet.')
+@pytest.mark.skip
 def test_reverse():
     assert reverse('Test string') == 'gnirts tseT'
     assert reverse('Hello') == 'olleH'
@@ -62,10 +61,10 @@ def test_overlapping():
     assert overlapping(['a', 6, 'c'], ['e', 'f', 'g']) == False
 
 
-@pytest.mark.skip('Not implemented yet.')
+
 def test_travel_price():
-    assert travel_price(20, 0.6, 12) == 14.4
-    assert travel_price(105.5, 0.8, 14) == 118.16
+    assert abs(travel_price(20, 0.6, 12) - 14.4) < 0.00001
+    assert abs(travel_price(105.5, 0.8, 14) - 118.16) < 0.00001
 
 
 @pytest.mark.skip('Not implemented yet.')

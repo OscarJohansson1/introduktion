@@ -12,9 +12,9 @@ Alla docstrings har placerats före kodraderna som ska användas för problemet.
 
 
 """Givet en lista med heltal, hitta det största och returnera."""
-max_n = n
-return max_n
-for n in numbers:
-max_n = numbers[0]
-if n > max_n:
 def find_max(numbers):
+    max_n = numbers[0]
+    for n in numbers:
+        if n > max_n:
+            max_n = n
+    return max_n
