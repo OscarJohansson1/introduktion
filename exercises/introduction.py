@@ -3,6 +3,7 @@
 
 def repeat(string, num):
     """Repeterar en sträng (arg 1) num (arg 2) gånger.
+
     Returnerar en ny sträng eller en tom sträng om num är negativt.
     """
     return string * num
@@ -20,12 +21,13 @@ def bouncer(items):
 def rovarsprak(string):
     """Returnerar strängen på rövarspråk.
     * Versaler och gemener ska vara kvar enligt instoppad sträng.
+
     * Övriga tecken (.,*! etc.) ska vara kvar på samma position.
     `Wikipedia<https://sv.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket>`_
     """
     rovarsprak = []
-    konsonant = ["q", "w", "r", "t", "p", "s", "d", "f", "g", "h", "j", "k",]
-    konsonantStor = ["Q", "W", "R", "T", "P", "S", "D", "F", "G", "H", "J",]
+    konsonant = ["q", "w", "r", "t", "p", "s", "d", "f", "g", "h", "j", "k"]
+    konsonantStor = ["Q", "W", "R", "T", "P", "S", "D", "F", "G", "H", "J"]
     while len(string) > 0:
         if string[0] == konsonant:
             rovarsprak.append(string)
@@ -38,7 +40,6 @@ def rovarsprak(string):
         else:
             rovarsprak.append(string)
     return rovarsprak
-
 
 
 def area(width, height):
@@ -69,6 +70,7 @@ def vowel(character):
 
 def reverse(words):
     """Byter ordning på alla tecken i strängen `words`, returnerar resultatet.
+
     words = "Hej på dig!" ska till exempel returnera
     strängen "!gid åp jeH".
     """
@@ -86,6 +88,7 @@ def overlapping(list1, list2):
 
 def is_palindrome(words):
     """Returnerar sant om orden är en palindrom.
+
     Det vill säga en följd tecken som blir likadan oavsett om den läses
     framlänges eller baklänges, annars false. Ett exempel på palindrom är orden
     'ni talar bra latin' som kan läsas likadant åt båda hållen.
@@ -95,6 +98,7 @@ def is_palindrome(words):
 
 def what_type(var):
     """Returnerar en sträng med namnet av typen som variabeln 'var' tillhör.
+
     var = 5 ska till exempel returnera strängen "integer".
     """
     pass
@@ -102,6 +106,7 @@ def what_type(var):
 
 def travel_price(distance, consumtion, price):
     """Beräknar och returnerar priset för en resa.
+
     Resan är `distance` km lång, och görs med en bil som drar `consumption`
     liter bensin per mil då bensinen kostar `price` kr per liter.
     """
@@ -110,6 +115,7 @@ def travel_price(distance, consumtion, price):
 
 def character_frequency(words):
     """Returnerar ett histogram (dictionary).
+    
     Returnerar en dictionary med varje bokstav i strängen `words` som nyckel
     till ett värde av antalet gånger bokstaven uppkommer i stängen.
     """

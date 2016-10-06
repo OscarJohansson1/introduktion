@@ -11,7 +11,6 @@ Alla docstrings har placerats före kodraderna som ska användas för problemet.
 """
 
 
-
 def running_total(numbers):
     """Givet en lista med tal, beräkna den löpande summan."""
     total = []
